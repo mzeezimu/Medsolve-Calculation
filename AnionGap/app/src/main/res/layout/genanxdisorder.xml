@@ -1,0 +1,103 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background = "@drawable/splashscreen7"
+    tools:context=".AnionGap"
+    android:orientation="vertical"
+    android:id="@+id/linearstuff">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="302dp"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart="true"
+        android:columnCount="9"
+        android:rowCount="27"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#ff8bffc7"
+        >
+        <TextView
+            android:id="@+id/QuestionTextView"
+            android:text="Question"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"
+            android:layout_height="51dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:inputType="textMultiLine" />
+
+        <RadioGroup
+            android:layout_width="364dp"
+            android:layout_height="220dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:id="@+id/RGroupGenAnxDisorder">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not at all(0)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnQue1"
+                android:layout_row="0"
+                android:layout_column="8" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Several days(+1)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnQue2"
+                android:layout_row="0"
+                android:layout_column="8" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than half the days(+2)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnQue3"
+                android:layout_row="1"
+                android:layout_column="0" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearly every day(+3)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnQue4"
+                android:layout_column="0" />
+        </RadioGroup>
+
+    </GridLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

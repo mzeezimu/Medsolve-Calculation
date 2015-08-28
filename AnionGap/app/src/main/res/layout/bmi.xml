@@ -1,0 +1,214 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background = "@drawable/splashscreen7"
+    tools:context=".AnionGap"
+    android:orientation="vertical">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="302dp"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart="true"
+        android:columnCount="9"
+        android:rowCount="22"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#ff8bffc7"
+        >
+        <TextView
+            android:id="@+id/sex"
+            android:text="Sex:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:id="@+id/radioSex">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnMale"
+                android:layout_row="0"
+                android:layout_column="5" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:id="@+id/RbtnFMale"
+                android:layout_row="0"
+                android:layout_column="8" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Weight (Kg) :"
+            android:textStyle="bold|italic"
+            android:id="@+id/textView"
+            android:layout_row="5"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Weight_Text"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_row="5"
+            android:layout_column="8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Height(M) :"
+            android:textStyle="bold|italic"
+            android:id="@+id/textView2"
+            android:layout_row="7"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Height_Text"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_row="7"
+            android:layout_column="8" />
+
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="72dp"
+            android:text="@string/calculate"
+            android:id="@+id/button2"
+            android:layout_row="21"
+            android:layout_column="5"
+            android:onClick="buttonOnClick" />
+
+    </GridLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="Body Surface Area ="
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"
+                    />
+
+                <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText3"
+                    android:layout_column="6" />
+
+            </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Lean Body Weight ="
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:textColor="#ffff150e" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbwText"
+                android:layout_column="6" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Ideal Body Weight ="
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibwText"
+                android:layout_column="6" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Body Mass Index ="
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bmiText"
+                android:layout_column="6" />
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
